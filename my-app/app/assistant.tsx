@@ -1,6 +1,8 @@
 "use client";
 
 import { AssistantRuntimeProvider } from "@assistant-ui/react";
+import logo from "./logo.png"; // same folder
+import Image from "next/image";
 import {
   useChatRuntime,
   AssistantChatTransport,
@@ -39,7 +41,15 @@ export const Assistant = () => {
               <SidebarTrigger />
               <Separator orientation="vertical" className="mr-2 h-4" />
               <Breadcrumb>
-               Aion Web Chat Assistant
+              <div className="flex items-center gap-2">
+                <Image
+                  src={logo}
+                  alt="Aion Logo"
+                 
+                  className="h-6 w-18"
+                />
+               Aion SmartChat
+               </div>
               </Breadcrumb>
             </header>
             <div className="flex-1 overflow-hidden">
